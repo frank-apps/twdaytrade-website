@@ -5,20 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>隱私權政策 — 當沖計算機</title>
   <style>
-    :root { --accent: #FFD60A; --text: #1a1a1a; --muted: #555; --radius: 16px; }
+    :root { --bg: #000; --text: #fff; --muted: rgba(255,255,255,0.6); --card: rgba(255,255,255,0.08); --separator: rgba(255,255,255,0.15); --accent: #10D98A; --green: #10D98A; --radius: 999px; }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #fff; color: var(--text); line-height: 1.6; }
-    header { border-bottom: 3px solid var(--accent); padding: 1.25rem 1.5rem; }
-    header h1 { margin: 0; font-size: 1.35rem; }
-    nav { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
-    nav a, .lang-btn { display: inline-block; padding: 0.4rem 0.85rem; border: 2px solid var(--accent); border-radius: var(--radius); background: #fff; color: var(--text); text-decoration: none; font-size: 0.9rem; cursor: pointer; }
-    nav a:hover, .lang-btn:hover { background: #fffef5; }
-    .lang-btn.active { background: var(--accent); font-weight: 600; }
-    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    a { color: var(--accent); }
+    header { border-bottom: 1px solid var(--separator); padding: 1.25rem 1.5rem; }
+    header h1 { margin: 0; font-size: 1.6rem; }
+    nav { margin-top: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    nav a, .lang-btn { display: inline-block; padding: 0.45rem 1rem; border: 1px solid var(--separator); border-radius: var(--radius); background: var(--card); color: var(--muted); text-decoration: none; font-size: 0.9rem; cursor: pointer; font-family: inherit; }
+    nav a:hover, .lang-btn:hover { color: var(--text); }
+    nav a.current, .lang-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    main { max-width: 52rem; margin: 0 auto; padding: 1.5rem; }
     section[hidden] { display: none !important; }
-    h2 { font-size: 1.1rem; margin-top: 1.35rem; }
-    ul { padding-left: 1.25rem; }
-    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.85rem; color: var(--muted); }
+    h2 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.35rem; }
+    p, li { color: var(--text); }
+    .muted, em { color: var(--muted); }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin-bottom: 0.35rem; }
+    strong { color: var(--accent); font-weight: 600; }
+    .lead { font-size: 1.05rem; color: var(--muted); }
+    .contact-box { margin-top: 1rem; padding: 1rem 1.25rem; border-radius: 16px; background: var(--card); }
+    .manual-shots-row { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 1.25rem; margin: 1rem 0 1.5rem; align-items: start; }
+    figure.manual-shot { margin: 1rem 0 1.5rem; padding: 0; width: 100%; max-width: 260px; }
+    .manual-shots-row figure.manual-shot { margin: 0; }
+    @media (max-width: 540px) { .manual-shots-row { grid-template-columns: minmax(0, 260px); } }
+    figure.manual-shot img { display: block; width: 100%; height: auto; border-radius: 20px; background: var(--card); }
+    figure.manual-shot figcaption { margin-top: 0.5rem; font-size: 0.85rem; color: var(--muted); line-height: 1.45; }
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--separator); font-size: 0.85rem; color: var(--muted); }
+    footer p { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -26,7 +41,7 @@
     <h1 id="page-title">隱私權政策</h1>
     <nav aria-label="Site">
       <a href="index.html" id="nav-home">介紹</a>
-      <a href="privacy.html" id="nav-privacy">隱私權</a>
+      <a href="privacy.html" id="nav-privacy" class="current">隱私權</a>
       <a href="support.html" id="nav-support">支援</a>
       <span style="margin-left: auto;"></span>
       <button type="button" class="lang-btn active" data-lang="zh" aria-pressed="true">繁中</button>
