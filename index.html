@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>當沖計算機</title>
+  <style>
+    :root { --accent: #FFD60A; --text: #1a1a1a; --muted: #555; --radius: 16px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #fff; color: var(--text); line-height: 1.65; }
+    header { border-bottom: 3px solid var(--accent); padding: 1.25rem 1.5rem; }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    nav { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    nav a, .lang-btn { display: inline-block; padding: 0.4rem 0.85rem; border: 2px solid var(--accent); border-radius: var(--radius); background: #fff; color: var(--text); text-decoration: none; font-size: 0.9rem; cursor: pointer; }
+    nav a:hover, .lang-btn:hover { background: #fffef5; }
+    .lang-btn.active { background: var(--accent); font-weight: 600; }
+    main { max-width: 52rem; margin: 0 auto; padding: 1.5rem; }
+    section[hidden] { display: none !important; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.35rem; }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin-bottom: 0.35rem; }
+    .lead { font-size: 1.05rem; }
+    .manual-shots-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin: 1rem 0 1.5rem; align-items: start; }
+    figure.manual-shot { margin: 0; padding: 0; width: 100%; min-width: 0; }
+    @media (max-width: 540px) { .manual-shots-row { grid-template-columns: 1fr; } }
+    figure.manual-shot img { display: block; width: 100%; height: auto; border: 2px solid var(--accent); border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    figure.manual-shot figcaption { margin-top: 0.5rem; font-size: 0.85rem; color: var(--muted); line-height: 1.45; }
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">當沖計算機</h1>
+    <nav aria-label="Site">
+      <a href="index.html" id="nav-home">介紹</a>
+      <a href="privacy.html" id="nav-privacy">隱私權</a>
+      <a href="support.html" id="nav-support">支援</a>
+      <span style="margin-left: auto;"></span>
+      <button type="button" class="lang-btn active" data-lang="zh" aria-pressed="true">繁中</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </nav>
+  </header>
+  <main>
+    <section id="zh" lang="zh-Hant">
+      <p class="lead">台股現股與 ETF 的當沖試算。輸入買進價和張數，看漲幾檔開始獲利；也可以從券商對帳單反推手續費折數。</p>
+      <h2>操作說明</h2>
+      <h3>1. 選折數</h3>
+      <p>第一次開啟時選一個常用折數。選完就進入試算。之後可從試算頁右上角的折數膠囊更改。</p>
+      <figure class="manual-shot">
+        <img src="store/zh-01-onboarding.jpg" width="402" height="874" alt="先選你的折數">
+        <figcaption>先選你的折數，選好就能開始試算。</figcaption>
+      </figure>
+      <h3>2. 試算</h3>
+      <p>選股票或 ETF、多方或空方，輸入買進價和張數，按計算。結果寫出漲或跌幾檔開始獲利，表格列出每一檔的價格和損益。</p>
+      <div class="manual-shots-row">
+        <figure class="manual-shot">
+          <img src="store/zh-02-calculator.jpg" width="402" height="874" alt="股票和 ETF 當沖">
+          <figcaption>輸入買進價和張數。</figcaption>
+        </figure>
+        <figure class="manual-shot">
+          <img src="store/zh-03-ladder.jpg" width="402" height="874" alt="看每一檔賺多少">
+          <figcaption>漲幾檔開始獲利，以及每一檔損益。</figcaption>
+        </figure>
+      </div>
+      <h3>3. 從對帳單反推</h3>
+      <p>打開反推，點券商。單邊明細抄價金和手續費；買賣彙總再抄買進價金和手續費合計。不要填持有成本或損益。算出來可設成你的折數。</p>
+      <figure class="manual-shot">
+        <img src="store/zh-04-fee-reverse.jpg" width="402" height="874" alt="從對帳單反推折數">
+        <figcaption>抄價金和手續費，反推折數。</figcaption>
+      </figure>
+    </section>
+    <section id="en" lang="en" hidden>
+      <p class="lead">A day-trade calculator for Taiwan stocks and ETFs. Enter a buy price and lot size to see how many ticks until you profit, or reverse your fee discount from a broker statement.</p>
+      <h2>How to use it</h2>
+      <h3>1. Pick a discount</h3>
+      <p>The first time you open the app, pick a commission discount. You then land on the calculator. Change it later from the capsule at the top right.</p>
+      <figure class="manual-shot">
+        <img src="store/en-01-onboarding.jpg" width="402" height="874" alt="Pick your discount">
+        <figcaption>Pick your discount, then start calculating.</figcaption>
+      </figure>
+      <h3>2. Calculate</h3>
+      <p>Choose Stock or ETF, Long or Short, enter the buy price and lot size, then Calculate. The result shows how many ticks until you profit, and P/L at each price.</p>
+      <div class="manual-shots-row">
+        <figure class="manual-shot">
+          <img src="store/en-02-calculator.jpg" width="402" height="874" alt="Stocks and ETFs">
+          <figcaption>Enter a price and lot size.</figcaption>
+        </figure>
+        <figure class="manual-shot">
+          <img src="store/en-03-ladder.jpg" width="402" height="874" alt="Profit at each price">
+          <figcaption>How many ticks until you profit.</figcaption>
+        </figure>
+      </div>
+      <h3>3. Reverse a statement</h3>
+      <p>Open Reverse and tap your broker. For a single-side statement, copy proceeds and commission. For a combined statement, also copy buy proceeds and the combined commission. Skip cost basis and P/L. You can save the result as your discount.</p>
+      <figure class="manual-shot">
+        <img src="store/en-04-fee-reverse.jpg" width="402" height="874" alt="Reverse the fee">
+        <figcaption>Copy proceeds and commission to reverse the discount.</figcaption>
+      </figure>
+    </section>
+    <footer>
+      <p id="footer-zh">本頁為當沖計算機的介紹與操作說明。問題請寫到 <a href="mailto:mikru168@gmail.com">mikru168@gmail.com</a>，或看<a href="support.html">支援</a>與<a href="privacy.html">隱私權</a>。</p>
+      <p id="footer-en" hidden>About and guide for TW Day Trade Calc. Write to <a href="mailto:mikru168@gmail.com">mikru168@gmail.com</a>, or see <a href="support.html">Support</a> and <a href="privacy.html">Privacy</a>.</p>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var navLabels = {
+        zh: { home: '介紹', privacy: '隱私權', support: '支援', title: '當沖計算機' },
+        en: { home: 'About', privacy: 'Privacy', support: 'Support', title: 'TW Day Trade Calc' }
+      };
+      function setLang(lang) {
+        document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
+        document.title = navLabels[lang].title;
+        document.getElementById('zh').hidden = lang !== 'zh';
+        document.getElementById('en').hidden = lang !== 'en';
+        document.getElementById('footer-zh').hidden = lang !== 'zh';
+        document.getElementById('footer-en').hidden = lang !== 'en';
+        document.getElementById('page-title').textContent = navLabels[lang].title;
+        document.getElementById('nav-home').textContent = navLabels[lang].home;
+        document.getElementById('nav-privacy').textContent = navLabels[lang].privacy;
+        document.getElementById('nav-support').textContent = navLabels[lang].support;
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          var on = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('active', on);
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
+      });
+      if (location.hash === '#en') setLang('en');
+    })();
+  </script>
+</body>
+</html>

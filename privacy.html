@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>隱私權政策 — 當沖計算機</title>
+  <style>
+    :root { --accent: #FFD60A; --text: #1a1a1a; --muted: #555; --radius: 16px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #fff; color: var(--text); line-height: 1.6; }
+    header { border-bottom: 3px solid var(--accent); padding: 1.25rem 1.5rem; }
+    header h1 { margin: 0; font-size: 1.35rem; }
+    nav { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    nav a, .lang-btn { display: inline-block; padding: 0.4rem 0.85rem; border: 2px solid var(--accent); border-radius: var(--radius); background: #fff; color: var(--text); text-decoration: none; font-size: 0.9rem; cursor: pointer; }
+    nav a:hover, .lang-btn:hover { background: #fffef5; }
+    .lang-btn.active { background: var(--accent); font-weight: 600; }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem; }
+    section[hidden] { display: none !important; }
+    h2 { font-size: 1.1rem; margin-top: 1.35rem; }
+    ul { padding-left: 1.25rem; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">隱私權政策</h1>
+    <nav aria-label="Site">
+      <a href="index.html" id="nav-home">介紹</a>
+      <a href="privacy.html" id="nav-privacy">隱私權</a>
+      <a href="support.html" id="nav-support">支援</a>
+      <span style="margin-left: auto;"></span>
+      <button type="button" class="lang-btn active" data-lang="zh" aria-pressed="true">繁中</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </nav>
+  </header>
+  <main>
+    <section id="zh" lang="zh-Hant">
+      <p>本政策說明當沖計算機（以下稱「本 App」）如何處理您的資訊。使用本 App 即表示您理解下列內容。</p>
+      <h2>試算在您的裝置上進行</h2>
+      <p>買進價、張數、損益、券商折數與對帳單上抄下的價金、手續費，都在您的 iPhone 上計算與保存。這些內容不會上傳到開發者的伺服器。</p>
+      <h2>本機設定</h2>
+      <p>折數、券商名稱、是否看過引導，存在這支手機的本機設定。刪除 App 會一併清除。</p>
+      <h2>當機報告（Firebase Crashlytics）</h2>
+      <p>正式版使用 Firebase Crashlytics，只收集<strong>未捕捉的當機</strong>與除錯資訊，用來修穩定性。不會上傳您輸入的價格、股數或對帳單數字。</p>
+      <h2>廣告（Google AdMob）</h2>
+      <p>完成引導後，Tab Bar 上方可能顯示一則橫幅廣告。App 會先透過 Apple 的 App Tracking Transparency 詢問追蹤許可；若您拒絕，廣告請求將以<strong>非個人化</strong>方式處理。開發與測試版本使用 Google 測試廣告，不會用您的正式廣告識別碼。</p>
+      <h2>我們不出售個人資料</h2>
+      <p>我們不會出售您的個人資料。</p>
+      <p><em>最後更新：2026-10-22。政策隨 App 功能調整時可能更新，請以本頁最新內容為準。</em></p>
+    </section>
+    <section id="en" lang="en" hidden>
+      <p>This policy describes how TW Day Trade Calc (“the app”) handles information. By using the app, you acknowledge the practices below.</p>
+      <h2>Calculations stay on your device</h2>
+      <p>Prices, lot size, profit and loss, your fee discount, and the proceeds and commission you copy from a statement are calculated and stored on your iPhone. They are not uploaded to the developer’s servers.</p>
+      <h2>On-device settings</h2>
+      <p>Your discount, broker name, and whether you finished the intro are stored in on-device settings. Deleting the app removes them.</p>
+      <h2>Crash reports (Firebase Crashlytics)</h2>
+      <p>The production app uses Firebase Crashlytics to collect <strong>uncaught crashes</strong> and debugging information so we can fix stability issues. Prices, share counts, and statement figures you type are not uploaded.</p>
+      <h2>Advertising (Google AdMob)</h2>
+      <p>After the intro, a banner may appear above the tab bar. The app asks for tracking permission with Apple’s App Tracking Transparency. If you decline, ad requests are <strong>non-personalized</strong>. Development builds use Google’s test ads and do not use your production advertising identifier.</p>
+      <h2>We do not sell personal data</h2>
+      <p>We do not sell your personal information.</p>
+      <p><em>Last updated: 2026-10-22. This policy may change as the app changes. This page is the current version.</em></p>
+    </section>
+    <footer>
+      <p id="footer-zh">當沖計算機 — 隱私權政策</p>
+      <p id="footer-en" hidden>TW Day Trade Calc — Privacy Policy</p>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var navLabels = {
+        zh: { home: '介紹', privacy: '隱私權', support: '支援', title: '隱私權政策' },
+        en: { home: 'About', privacy: 'Privacy', support: 'Support', title: 'Privacy Policy' }
+      };
+      function setLang(lang) {
+        document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
+        document.getElementById('zh').hidden = lang !== 'zh';
+        document.getElementById('en').hidden = lang !== 'en';
+        document.getElementById('footer-zh').hidden = lang !== 'zh';
+        document.getElementById('footer-en').hidden = lang !== 'en';
+        document.getElementById('page-title').textContent = navLabels[lang].title;
+        document.getElementById('nav-home').textContent = navLabels[lang].home;
+        document.getElementById('nav-privacy').textContent = navLabels[lang].privacy;
+        document.getElementById('nav-support').textContent = navLabels[lang].support;
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          var on = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('active', on);
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
+      });
+      if (location.hash === '#en') setLang('en');
+    })();
+  </script>
+</body>
+</html>

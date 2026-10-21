@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>支援 — 當沖計算機</title>
+  <style>
+    :root { --accent: #FFD60A; --text: #1a1a1a; --muted: #555; --radius: 16px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #fff; color: var(--text); line-height: 1.6; }
+    header { border-bottom: 3px solid var(--accent); padding: 1.25rem 1.5rem; }
+    header h1 { margin: 0; font-size: 1.35rem; }
+    nav { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    nav a, .lang-btn { display: inline-block; padding: 0.4rem 0.85rem; border: 2px solid var(--accent); border-radius: var(--radius); background: #fff; color: var(--text); text-decoration: none; font-size: 0.9rem; cursor: pointer; }
+    nav a:hover, .lang-btn:hover { background: #fffef5; }
+    .lang-btn.active { background: var(--accent); font-weight: 600; }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem; }
+    section[hidden] { display: none !important; }
+    h2 { font-size: 1.1rem; margin-top: 1.35rem; }
+    ol { padding-left: 1.25rem; }
+    .contact-box { margin-top: 1rem; padding: 1rem 1.25rem; border: 2px solid var(--accent); border-radius: var(--radius); background: #fff; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">支援</h1>
+    <nav aria-label="Site">
+      <a href="index.html" id="nav-home">介紹</a>
+      <a href="privacy.html" id="nav-privacy">隱私權</a>
+      <a href="support.html" id="nav-support">支援</a>
+      <span style="margin-left: auto;"></span>
+      <button type="button" class="lang-btn active" data-lang="zh" aria-pressed="true">繁中</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </nav>
+  </header>
+  <main>
+    <section id="zh" lang="zh-Hant">
+      <p>以下是當沖計算機的常見用法。若問題仍無法解決，請寄信到下方支援信箱。</p>
+      <h2>怎麼試算</h2>
+      <ol>
+        <li>第一次開啟時選一個手續費折數。之後可在試算頁上方的折數膠囊更改。</li>
+        <li>選股票或 ETF，再選多方或空方。</li>
+        <li>輸入買進價，點張數（1、2、5、10 張），按計算。</li>
+        <li>結果會寫漲或跌幾檔開始獲利，表格列出每一檔的價格和損益。</li>
+      </ol>
+      <h2>怎麼從對帳單反推折數</h2>
+      <ol>
+        <li>打開「反推」，點你的券商。元大這類單邊明細抄「價金」和「手續費」。</li>
+        <li>國泰這類買賣彙總改抄賣出價金、買進價金和手續費合計。不要填持有成本或損益。</li>
+        <li>算出唯一折數後，可按「將手續費設為 N 折」。確認後會變成你的折數。</li>
+      </ol>
+      <h2>折數和稅</h2>
+      <p>折數只看價金和手續費，與現股、當沖、ETF 的證交稅無關。買賣彙總若列出證交稅，沿用試算頁目前的股票或 ETF 當沖稅率，可能和對帳單上的稅不同。</p>
+      <h2>聯絡我們</h2>
+      <div class="contact-box">
+        <p><a href="mailto:mikru168@gmail.com">mikru168@gmail.com</a></p>
+      </div>
+    </section>
+    <section id="en" lang="en" hidden>
+      <p>How to use TW Day Trade Calc. If you still need help, email the address below.</p>
+      <h2>Calculate a trade</h2>
+      <ol>
+        <li>The first time you open the app, pick a commission discount. You can change it later from the capsule at the top of the calculator.</li>
+        <li>Choose Stock or ETF, then Long or Short.</li>
+        <li>Enter the buy price, tap a lot size (1, 2, 5, or 10), then Calculate.</li>
+        <li>The result shows how many ticks until you profit, and a table of price and P/L at each tick.</li>
+      </ol>
+      <h2>Reverse a discount from a statement</h2>
+      <ol>
+        <li>Open Reverse and tap your broker. For a single-side statement such as Yuanta, copy proceeds and commission.</li>
+        <li>For a combined statement such as Cathay, copy sell proceeds, buy proceeds, and the combined commission. Do not enter cost basis or P/L.</li>
+        <li>When one discount matches, tap “Set fee to …”. After you confirm, it becomes your discount.</li>
+      </ol>
+      <h2>Discount and tax</h2>
+      <p>The discount uses proceeds and commission only. It does not depend on regular, day-trade, or ETF tax. If the combined view shows transaction tax, it follows the calculator’s current stock or ETF day-trade rate, which may differ from the statement.</p>
+      <h2>Contact us</h2>
+      <div class="contact-box">
+        <p><a href="mailto:mikru168@gmail.com">mikru168@gmail.com</a></p>
+      </div>
+    </section>
+    <footer>
+      <p id="footer-zh">當沖計算機 — 支援</p>
+      <p id="footer-en" hidden>TW Day Trade Calc — Support</p>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var navLabels = {
+        zh: { home: '介紹', privacy: '隱私權', support: '支援', title: '支援' },
+        en: { home: 'About', privacy: 'Privacy', support: 'Support', title: 'Support' }
+      };
+      function setLang(lang) {
+        document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
+        document.getElementById('zh').hidden = lang !== 'zh';
+        document.getElementById('en').hidden = lang !== 'en';
+        document.getElementById('footer-zh').hidden = lang !== 'zh';
+        document.getElementById('footer-en').hidden = lang !== 'en';
+        document.getElementById('page-title').textContent = navLabels[lang].title;
+        document.getElementById('nav-home').textContent = navLabels[lang].home;
+        document.getElementById('nav-privacy').textContent = navLabels[lang].privacy;
+        document.getElementById('nav-support').textContent = navLabels[lang].support;
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          var on = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('active', on);
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
+      });
+      if (location.hash === '#en') setLang('en');
+    })();
+  </script>
+</body>
+</html>
