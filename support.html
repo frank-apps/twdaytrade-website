@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>支援 — 當沖計算機</title>
   <style>
-    :root { --bg: #000; --text: #fff; --muted: rgba(255,255,255,0.6); --card: rgba(255,255,255,0.08); --separator: rgba(255,255,255,0.15); --accent: #10D98A; --green: #10D98A; --radius: 999px; }
+    :root { --bg: #000; --text: #fff; --muted: rgba(255,255,255,0.6); --card: rgba(255,255,255,0.08); --separator: rgba(255,255,255,0.15); --accent: #D70015; --radius: 999px; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
-    a { color: var(--accent); }
+    a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
     header { border-bottom: 1px solid var(--separator); padding: 1.25rem 1.5rem; }
     header h1 { margin: 0; font-size: 1.6rem; }
     nav { margin-top: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
     nav a, .lang-btn { display: inline-block; padding: 0.45rem 1rem; border: 1px solid var(--separator); border-radius: var(--radius); background: var(--card); color: var(--muted); text-decoration: none; font-size: 0.9rem; cursor: pointer; font-family: inherit; }
     nav a:hover, .lang-btn:hover { color: var(--text); }
-    nav a.current, .lang-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    nav a.current, .lang-btn.active { color: var(--text); border-color: var(--accent); font-weight: 600; }
     main { max-width: 52rem; margin: 0 auto; padding: 1.5rem; }
     section[hidden] { display: none !important; }
     h2 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; }
@@ -23,7 +23,7 @@
     .muted, em { color: var(--muted); }
     ul, ol { padding-left: 1.25rem; }
     li { margin-bottom: 0.35rem; }
-    strong { color: var(--accent); font-weight: 600; }
+    strong { color: var(--text); font-weight: 600; }
     .lead { font-size: 1.05rem; color: var(--muted); }
     .contact-box { margin-top: 1rem; padding: 1rem 1.25rem; border-radius: 16px; background: var(--card); }
     .manual-shots-row { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 1.25rem; margin: 1rem 0 1.5rem; align-items: start; }
