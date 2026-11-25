@@ -50,7 +50,7 @@
   </header>
   <main>
     <section id="zh" lang="zh-Hant">
-      <p class="lead">台股現股與 ETF 的當沖試算。輸入買進價和張數，看漲幾檔開始獲利；也可以從券商對帳單反推手續費折數。</p>
+      <p class="lead">台股現股與 ETF 的當沖試算。輸入買進價和張數，看漲幾檔開始獲利；也可以從券商對帳單反推手續費折數，或在「盤後」分頁查市場摘要與個股盤後資料。</p>
       <h2>操作說明</h2>
       <h3>1. 選折數</h3>
       <p>第一次開啟時選一個常用折數。選完就進入試算。之後可從試算頁右上角的折數膠囊更改。</p>
@@ -76,9 +76,23 @@
         <img src="store/zh-04-fee-reverse.jpg" width="402" height="874" alt="從對帳單反推折數">
         <figcaption>抄價金和手續費，反推折數。</figcaption>
       </figure>
+      <h3>4. 看盤後資料</h3>
+      <p>打開「盤後」分頁。上方的市場摘要列出加權指數、櫃買指數的漲跌、漲跌幅與成交金額，兩個市場各自標示資料日。處置股、暫停先賣後買預告預設收合，點標題展開。</p>
+      <p>輸入股票代號或名稱，可看開盤參考價、漲跌停、當沖資格、處置與注意股、除權息預告，以及盤後成交（開高低收、成交量、成交金額）。按「以參考價開始試算」，直接帶入試算頁。</p>
+      <div class="manual-shots-row">
+        <figure class="manual-shot">
+          <img src="store/zh-05-market-summary.jpg" width="402" height="874" alt="盤後市場摘要">
+          <figcaption>加權、櫃買指數與處置股清單。</figcaption>
+        </figure>
+        <figure class="manual-shot">
+          <img src="store/zh-06-symbol-info.jpg" width="402" height="874" alt="個股盤後資料">
+          <figcaption>個股參考價、漲跌停與盤後成交。</figcaption>
+        </figure>
+      </div>
+      <p>資料來自臺灣證券交易所、證券櫃檯買賣中心的盤後公開資料，每個交易日更新一次，僅供參考，請以交易所公告為準。資料來源與授權條款列在「設定 → 資料來源與授權」。</p>
     </section>
     <section id="en" lang="en" hidden>
-      <p class="lead">A day-trade calculator for Taiwan stocks and ETFs. Enter a buy price and lot size to see how many ticks until you profit, or reverse your fee discount from a broker statement.</p>
+      <p class="lead">A day-trade calculator for Taiwan stocks and ETFs. Enter a buy price and lot size to see how many ticks until you profit, reverse your fee discount from a broker statement, or check the market summary and stock data on the After Hours tab.</p>
       <h2>How to use it</h2>
       <h3>1. Pick a discount</h3>
       <p>The first time you open the app, pick a commission discount. You then land on the calculator. Change it later from the capsule at the top right.</p>
@@ -104,6 +118,20 @@
         <img src="store/en-04-fee-reverse.jpg" width="402" height="874" alt="Reverse the fee">
         <figcaption>Copy proceeds and commission to reverse the discount.</figcaption>
       </figure>
+      <h3>4. After-hours data</h3>
+      <p>Open the After Hours tab. The market summary at the top shows TAIEX and TPEx Index change, percentage, and turnover, each with its own data date. Disposition stocks and upcoming sell-first suspensions start collapsed; tap a title to expand it.</p>
+      <p>Search by symbol or name to see the opening reference price, price limits, day-trading eligibility, disposition and attention notices, upcoming ex-rights and ex-dividend dates, and the day's open, high, low, close, volume, and turnover. Tap “Calculate from Reference Price” to start a calculation with that price.</p>
+      <div class="manual-shots-row">
+        <figure class="manual-shot">
+          <img src="store/en-05-market-summary.jpg" width="402" height="874" alt="After-hours market summary">
+          <figcaption>TAIEX, TPEx Index, and disposition stocks.</figcaption>
+        </figure>
+        <figure class="manual-shot">
+          <img src="store/en-06-symbol-info.jpg" width="402" height="874" alt="After-hours stock data">
+          <figcaption>Reference price, price limits, and daily trading.</figcaption>
+        </figure>
+      </div>
+      <p>Data comes from after-hours public data from the Taiwan Stock Exchange and the Taipei Exchange, updated once every trading day. It is for reference only; exchange announcements prevail. Sources and license terms are listed in Settings &gt; Data Sources &amp; License.</p>
     </section>
     <footer>
       <p id="footer-zh">本頁為當沖計算機的介紹與操作說明。問題請寫到 <a href="mailto:mikru168@gmail.com">mikru168@gmail.com</a>，或看<a href="support.html">支援</a>與<a href="privacy.html">隱私權</a>。</p>
